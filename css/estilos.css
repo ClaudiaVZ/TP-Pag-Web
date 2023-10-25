@@ -1,0 +1,424 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*section#galeria {}
+
+section#galeria {}*/
+
+:root{
+    scroll-behavior: smooth; /* para controlar el comportamiento del scrooll */
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* para todos los contenedores de la pag*/
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;   /* que todo lo que se desborde se oculte */
+    margin: auto;       /* que se centre */
+    padding: 60px 0;    /* que haya espacio entre los elementos */
+}
+
+.header{
+    height: 100vh;    /* alto del 100% de lo que ocupa la pantalla */
+    background-image: linear-gradient(45deg, rgba(147, 165, 207, 0.5) 0%, rgba(228, 239, 233, 0.5) 100%),url(../img/velero.jpg); /*075*/
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-attachment:fixed;
+    background-position: center;
+}
+
+/* CSS para textos */
+.head{
+    text-align: center;
+    padding: 0;             /* que acá, me saque los 60px del contenedor*/
+    height: 100%;
+    display:flex;           /* que se posicionen Horiz y Verticalmente al centro */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* separamos las columnas (textos) */
+    color: #fff;         /* color de texto Blanco */
+}
+
+/* menu hamburguesa */
+.hamburguer{
+    position: fixed;       /* posicion fija aunq hagamos scrooll */
+    top: 30px;
+    right: 30px;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;      /* que aparesca la manito, cuando paso sobre él */
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0,0,0,.5);
+}
+
+/* enlaces del menu */
+.menu-navegacion{
+    position: fixed;
+    top: 0;
+    width: 30vw;   /* 30% ancho de la pag */
+    height: 100%;
+    background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%); /*075*/
+    background-image: linear-gradient(60deg, #96deda 0%, #50c9c3 100%); /*096*/
+    display: flex;                    /* que se pongan uno... */
+    flex-direction: column;           /* ...debajo del otro. */
+    justify-content: space-evenly;    /* que reparta espacio equitavivamente en Vertical */
+    align-items: center;
+    right: 0;
+    transform: translateX(110%);
+    transition:transform 0.3s ease-in-out;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+/* agrego una class extra: para que al dar click al menu-nav, aparesca otra ves. */
+.spread{
+    transform: translateX(0)
+}
+
+/* elementos del menu de navegacion */
+.menu-navegacion a{
+    color:#fff;
+    text-decoration: none;  
+}
+
+/* titulos */
+.titulo{
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.copy{
+    font-weight: 300;
+    font-size: 25px;
+} /* fin del header */
+
+/* MAIN - SERVICIOS - GALERIA - EXPERTOS */
+.subtitulo{
+    color: #93a6cf;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.contenedor-servicio{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;   /* si no entran en la misma linea, desplazar abajo */
+}
+
+.contenedor-servicio img{
+    width: 40%;
+}
+
+.checklist-servicio{
+    width: 45%;
+}
+
+.service{
+    margin-bottom: 20px;
+}
+
+.n-service{
+    margin-bottom: 7px;
+    color: #93a5cf 
+}
+
+/* elementos con clase number */
+.number{
+    display: inline-block;
+    background-image: linear-gradient(to top, #93a5cf 0%, #e4efe9 100%);
+    width: 30px;
+    height: 30px;
+    color:#fff;
+    text-align: center;
+    border-radius: 50%;   /* para redondear */
+    font-weight: 700;
+    line-height: 30px;   /* que centre verticalmente = */
+    margin-right: 5px;   /* que no este tan pegado con el contenido */
+}
+
+/* galeria */
+.gallery{
+    background: #f2f2f2;    /* fondo */
+}
+
+.contenedor-galeria{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.img-galeria{
+    object-fit: cover;
+    width: 30%;         /* aca puse 30px, y era 30% $%$#/& */
+    display: block;
+    margin-bottom: 15px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.imagen-light{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    transform: translate(100%);
+    transition: transform .2s ease-in-out;  /* ocultar close */
+}
+
+.agregar-imagen{
+    object-fit: cover;
+    width: 60px;
+    border-radius: 10px;
+    transform: scale(0);
+    transition: transform .3s .2s;
+}
+
+.showImage{
+    transform: scale(1);    /* close extra que se agrega cuando damos click a la imagen */
+}
+
+.show{
+    transform: translate(0);         /* volver close */
+}
+
+.close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    cursor: pointer;
+}
+
+/* parte de expertos */
+.experts{
+    width: 100%;
+    display: flex;                   /* uno al lado del otro */
+    justify-content: space-evenly;   /* espacio equitativo */
+    align-items: center;             /* centrar verticalmente */
+    flex-wrap: wrap;                 /* si no entran en la misma linea, pasalo abajo */
+}
+
+.cont-expert{
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cont-expert img{
+    display: block;
+    margin: auto;
+    width: 80%;
+}
+
+.n-expert{
+    width: 100%;
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: 400;
+    color: #93abcffb;
+}
+
+/* FOOTER */
+.footer{
+    background: #50c9c3;
+    padding-bottom: 10px;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;  /* que los elementos se pongan 1 al lado del otro pero en las esq. */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;                 /* pasar abajo si no entran */
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.contact-us{
+    width: 40%;
+    /*color: #fff;*/
+}
+
+.brand{                  /* marca h2 */
+    font-weight: 500;
+    font-size: 40px;
+    color:#fff
+}
+
+.brand+p{ /* parrafo de la marca */
+    font-weight: 500;
+    color:#fff
+}
+
+/* contenedor de iconos */
+.social-media{
+    width: 50%;
+    display: flex;               /* espacio equitativo */
+    justify-content: flex-end;   /* ubicar al final del contenedor */
+}
+
+.social-media-icon{
+    display: inline-block;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #fff;
+    border-radius: 50%;         /* redondeado */
+    text-align: center;         /* contenido centrado */
+    color:#fff;
+}
+
+.social-media-icon i{         
+    font-size: 30px;
+    line-height: 60px;
+}
+
+.line{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    height: 2px;
+    background: #fff;
+    margin-bottom: 60px; /* que haya espaciado */
+}
+
+.social-media-icon:hover{      /* al pasar sobre el elemento, que cambie de color */
+    background: #93afcfb6;
+    color: #e4efe9;
+}
+
+/* RESPONSIVE primer query */
+@media screen and (max-width: 800px){
+    .menu-navegacion{
+        width: 50vw;
+    }
+
+    .titulo{
+        font-size: 40px;
+    }
+
+    .contenedor-servicio img{
+        width: 80%;                /* que haga el wrap */
+        margin-bottom: 40px;
+    }
+    
+    .checklist-servicio{
+        width: 80%;
+    }
+
+    .service{
+        margin-bottom: 30px;
+    }
+
+    .img-galeria{
+        width: 45%;   /* dos imagenes por fila */
+    }
+
+    .agregar-Imagen{
+        width: 80%;
+    }
+
+    .cont-expert{
+        width: 80%;  /* que se ubiquen una debajo de otra */
+    }
+    
+    .footer-content{
+        justify-content: center;
+    }
+
+    .social-media{
+        width: 80%;
+        justify-content: space-evenly;
+    }
+
+    .social-media-icon{
+        margin-left: 0;
+    }
+
+    .contact-us{
+        text-align: center;
+        width: 80%;
+        margin-bottom: 40px;
+    }
+    
+}   /* cierro primer query */
+
+/* segunda query */
+@media screen and (max-width: 500px){
+    .menu-navegacion{
+        width: 65vw;
+    }
+
+    .hamburguer{
+        top: 20px;
+        right: 20px;
+    }
+
+    .titulo{
+        font-size: 30px;
+    }
+
+    .subtitulo{
+        font-size: 30px;
+    }
+
+    .img-galeria{
+        width: 95%;
+    }
+
+    .agregar-imagen{
+        width: 90%;
+    }
+
+    /* footer */
+    .social-media{
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .social-media-icon{
+        margin-left: 0;
+    }
+
+    .contact-us{
+        text-align: center;
+        width: 95%;
+        margin-bottom: 40px;
+    }
+    
+} /* cierro 2da query */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

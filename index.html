@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang='es'>
+<head>
+<meta charset="UTF-8">
+<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+<title>TP Pag Web</title>
+<link rel="stylesheet" href="css/estilos.css">
+
+<!-- Fuentes Google Fons -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+<!-- Boxicons CSS -->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'></link>
+
+</head>
+
+<body>
+    <header class="header" id="inicio">
+
+        <!-- imagen de menu hamburguesa -->
+        <img src="img/menu-hamburguesa.svg" alt="" class="hamburguer">
+
+        <!-- menu navegacion (desplazamiento por anclas) y enlaces -->
+        <nav class="menu-navegacion">
+            <a href="#inicio">Inicio</a>
+            <a href="#veleros">Veleros</a>
+            <a href="#cruceros">Cruceros</a>
+            <a href="#lanchas">Lanchas</a>
+            <a href="#footer">Contacto</a>
+        </nav>
+
+        <!-- cabecera H1 y P -->
+        <div class="contenedor head">
+            <h1>Brokers Embarcaciones</h1>
+            <p>Matenimiento, venta y gestoria</p>
+        </div>
+    </header>
+
+    <!-- etiqueta main: todo el contenido principal -->
+    <main>
+
+        <!-- primer section.contenedor#servicio -->
+        <seccion class="contenedor" id="servicio">
+
+            <!-- nombre del contenedor -->
+            <h2 class="subtitulo">Nuestro Servicio</h2>
+
+            <!-- lo que contiene cada contenedor div: imagen, nombre, h3, p. -->
+            <div class="contenedor-servicio">
+                <img src="img/checklist-two-color.svg" alt="">
+                <div class="checklist-servicio">
+                    <div class="service">
+                        <h3 class="n-service"><span class="number">1</span>Venta</h3>
+                        <p>Nos dedicamos a la venta de vehículos diseñados para navegar en el agua, botes, veleros, yates o barcos, utilizados para diversas actividades como pesca, recreación, transporte o deportes acuáticos., que varian en tamaño, forma y propósito, ofreciendo opciones para diferentes necesidades y gustos.</p>
+                    </div>
+                    <div class="service"> 
+                        <h3 class="n-service"><span class="number">2</span>Gestoria</h3>
+                        <p> Facilitamos el proceso de compra o venta de embarcaciones, incluyendo la investigación de antecedentes y la gestión de documentos legales., haciendo que la experiencia de poseer y operar una embarcación sea más fácil y sin problemas, cuidando todos los aspectos legales y administrativos relacionados con ellas</p>
+                    </div>
+                    <div class="service">
+                        <h3 class="n-service"><span class="number">3</span>Mantenimiento</h3>
+                        <p>Coordinamos servicios de mantenimiento, reparaciones, y cuidados necesarios para garantizar que la embarcación esté en buen estado de funcionamiento y seguridad.</p>
+                    </div>
+                </div>
+            </div>
+        </seccion>
+
+        <!-- segunda section.gallery#galeria -->
+        <section class="gallery" id="galeria">
+            <div class="contenedor">
+                <h2 class="subtitulo">Galeria</h2>
+
+                <!-- donde van las imagenes -->
+                <div class="contenedor-galeria">
+                    <img src= "img/imagen velero uno.jpg" class="img-galeria" alt="Hola">
+                    <img src="img/imagen velero dos.jpg" class="img-galeria" alt="">
+                    <img src="img/imagen yate tres.jpg" class="img-galeria" alt="">
+                    <img src="img/imagen yate cuatro.jpg" class="img-galeria" alt="">
+                    <img src="img/imagen crucero cinco.jpg" class="img-galeria" alt="">
+                    <img src="img/imagen documento seis.jpg" class="img-galeria" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- tercera section.imagen-light, se activa con JS (aparece cuando le damos click a una imagen)-->
+        <section class="imagen-light">
+            <img src="img/close.svg" alt=""class="close">
+            <img src="" alt=""class="agregar-imagen">   
+        </section>
+        
+        <!-- cuarta section.contenedor#expertos -->
+        <section class="contenedor" id="expertos">
+            <h2 class="subtitulo">Expertos En:</h2>
+            <section class="experts">
+                <div class="cont-expert">
+                    <img src="img/negociacion.svg" alt="">
+                    <h3 class="n-expert">Negociación</h3>
+                </div>
+                <div class="cont-expert">
+                    <img src="img/legales.svg" alt="">
+                    <h3 class="n-expert">Aspectos Legales</h3>
+                </div>
+                <div class="cont-expert">
+                    <img src="img/graficos-isometric.svg" alt="">
+                    <h3 class="n-expert">Tendencias del Mercado</h3>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <!-- pie de pag, contenedor del pie de pag, contenedor de contactos, h2, p, contenedor de redes sociales -->
+    <footer class="footer" id="footer" >
+        <div class="contenedor footer-content">
+            <div class="contact-us">
+                <h2 class="brand">Brokers Embarcaciones</h2>
+                <p>mantenimiento, venta y gestoria</p>
+            </div>
+            <div class="social-media">
+                <a href="./" class="social-media-icon">
+                    <i class='bx bxl-facebook'></i>
+                </a>
+                <a href="./" class="social-media-icon">
+                    <i class='bx bxl-instagram'></i>
+                </a>
+                <a href="./" class="social-media-icon">
+                    <i class='bx bxl-twitter'></i>
+                </a>
+            </div>
+        </div>
+        <div class="line"></div>
+    </footer>
+  
+<script src="js/menu.js"></script>
+<script src="js/lightbox.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
