@@ -30,7 +30,7 @@ body{
     background-image: linear-gradient(45deg, rgba(147, 165, 207, 0.5) 0%, rgba(228, 239, 233, 0.5) 100%),url(../img/velero.jpg); /*075*/
     background-repeat: no-repeat; 
     background-size: cover; 
-    background-attachment:fixed;
+    background-attachment:fixed; /* imagen fija */
     background-position: center;
 }
 
@@ -88,9 +88,9 @@ body{
     text-decoration: none;  
 }
 
-/* titulos */
+/* titulos h1 */
 .titulo{
-    font-size: 60px;
+    font-size: 30px;
     margin-bottom: 15px;
 }
 
@@ -128,8 +128,8 @@ body{
 }
 
 .n-service{
-    margin-bottom: 7px;
-    color: #93a5cf 
+    margin-bottom: 10px;
+    color: #93a5cf  
 }
 
 /* elementos con clase number */

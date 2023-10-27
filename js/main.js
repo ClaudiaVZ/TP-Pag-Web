@@ -1,5 +1,5 @@
 
-/*mostrar u ocultar la barra de navegacion, segun el desplazamiento scroll en la pag*/
+/*sobre desplazamiento scroll en la pag*/
 
 /*let ubicacionPrincipal = window.scrollY; //0
 
@@ -31,4 +31,4 @@ document.querySelectorAll(".hamburguer")[0].addEventListener("click", function()
     }
 
     enlacesHeader.classList.toggle("menudos")
-}) /* evaluar medias querys responsive */  
+})*/    

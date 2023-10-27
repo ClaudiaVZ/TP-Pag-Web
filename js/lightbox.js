@@ -1,4 +1,5 @@
 /* constantes */
+
 const imagenes = document.querySelectorAll('.img-galeria')
 const imagenLight = document.querySelector('.agregar-imagen');
 const contenedorLight = document.querySelector('.imagen-light')
@@ -25,5 +26,5 @@ const aparecerImagen = (imagen)=>{
     imagenLight.src = imagen;
     contenedorLight.classList.toggle('show')
     imagenLight.classList.toggle('showImage')
-    hamburguer.style.opacity = '0';   /* que desaparesca cuando abro el lightbox */
+    hamburguer1.style.opacity = '0';   /* que desaparesca cuando abro el lightbox */
 }

@@ -1,7 +1,7 @@
 const hamburguer = document.querySelector('.hamburguer') /* verificar la clase en html */
 const menu = document.querySelector('.menu-navegacion')
 
-/* creamos un evento del tipo click */
+/* evento del tipo click */
 hamburguer.addEventListener('click', ()=>{  /* funcion de flecha */
     menu.classList.toggle("spread")  
 })
