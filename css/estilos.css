@@ -32,6 +32,8 @@ body{
     background-size: cover; 
     background-attachment:fixed; /* imagen fija */
     background-position: center;
+    font-size: 30px;        
+    margin-bottom: 15px;
 }
 
 /* CSS para textos */
@@ -113,14 +115,17 @@ body{
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;   /* si no entran en la misma linea, desplazar abajo */
+    margin-bottom: 20px;
 }
 
 .contenedor-servicio img{
     width: 40%;
+    /*margin-right: 20px;*/
 }
 
 .checklist-servicio{
     width: 45%;
+    
 }
 
 .service{
@@ -140,16 +145,21 @@ body{
     height: 30px;
     color:#fff;
     text-align: center;
-    border-radius: 50%;   /* para redondear */
+    border-radius: 50%;               /* para redondear */
     font-weight: 700;
-    line-height: 30px;   /* que centre verticalmente = */
-    margin-right: 5px;   /* que no este tan pegado con el contenido */
+    line-height: 30px;               /* que centre verticalmente = */
+    margin-right: 5px;               /* que no este tan pegado con el contenido */
+}
+
+.article.cotenedor-servicio img{
+    width: 40%;                    /* Ancho de la imagen */
+    margin-right: 1px; 
 }
 
 /* galeria */
 .gallery{
     background: #f2f2f2;    /* fondo */
-}
+    }
 
 .contenedor-galeria{
     display: flex;
@@ -183,7 +193,8 @@ body{
 
 .agregar-imagen{
     object-fit: cover;
-    width: 60px;
+    max-width: 90%;
+    max-height: 90vh;     /* tamaño de imagen dentro del light */
     border-radius: 10px;
     transform: scale(0);
     transition: transform .3s .2s;
@@ -199,7 +210,7 @@ body{
 
 .close{
     position: absolute;
-    top: 15px;
+    top: 20px;
     right: 15px;
     width: 40px;
     cursor: pointer;
@@ -292,10 +303,10 @@ body{
 .line{
     width: 90%;
     max-width: 1200px;
-    margin: auto;
+    margin: 20px;
     height: 2px;
     background: #fff;
-    margin-bottom: 60px; /* que haya espaciado */
+    margin-bottom: 60px;        /* que haya espaciado */
 }
 
 .social-media-icon:hover{      /* al pasar sobre el elemento, que cambie de color */
@@ -305,6 +316,10 @@ body{
 
 /* RESPONSIVE primer query */
 @media screen and (max-width: 800px){
+
+    .header h1 {
+        font-size: 40px; 
+    }
     .menu-navegacion{
         width: 50vw;
     }
@@ -313,8 +328,8 @@ body{
         font-size: 40px;
     }
 
-    .contenedor-servicio img{
-        width: 80%;                /* que haga el wrap */
+    .contenedor-servicio img{         /* que haga el wrap */
+        width: 80%;               
         margin-bottom: 40px;
     }
     
@@ -337,7 +352,7 @@ body{
     .cont-expert{
         width: 80%;  /* que se ubiquen una debajo de otra */
     }
-    
+
     .footer-content{
         justify-content: center;
     }
@@ -361,6 +376,11 @@ body{
 
 /* segunda query */
 @media screen and (max-width: 500px){
+    
+    .header h1 {
+        font-size: 40px; /* tamaño del título pantallas pequeñas (<= 500px) */
+    }
+
     .menu-navegacion{
         width: 65vw;
     }

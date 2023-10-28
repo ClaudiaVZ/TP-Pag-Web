@@ -1,7 +1,7 @@
 
 /*sobre desplazamiento scroll en la pag*/
 
-/*let ubicacionPrincipal = window.scrollY; //0
+let ubicacionPrincipal = window.scrollY; //0
 
   AOS.init();
 
@@ -14,11 +14,11 @@ window.addEventListener("scroll", function(){
     }
     ubicacionPrincipal= desplazamientoActual; //200
 
-})*/
+})
 
 // Menu
 
-/*let enlacesHeader = document.querySelectorAll(".enlaces-header")[0];
+let enlacesHeader = document.querySelectorAll(".enlaces-header")[0];
 let semaforo = true;
 
 document.querySelectorAll(".hamburguer")[0].addEventListener("click", function(){
@@ -31,4 +31,4 @@ document.querySelectorAll(".hamburguer")[0].addEventListener("click", function()
     }
 
     enlacesHeader.classList.toggle("menudos")
-})*/    
+})   
