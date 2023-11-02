@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-/*section#galeria {}
-
-section#galeria {}*/
-
 :root{
     scroll-behavior: smooth; /* para controlar el comportamiento del scrooll */
 }
@@ -116,16 +112,15 @@ body{
     align-items: center;
     flex-wrap: wrap;   /* si no entran en la misma linea, desplazar abajo */
     margin-bottom: 20px;
+    flex-direction: row;
 }
 
 .contenedor-servicio img{
     width: 40%;
-    /*margin-right: 20px;*/
 }
 
 .checklist-servicio{
-    width: 45%;
-    
+    width: 45%;   
 }
 
 .service{
